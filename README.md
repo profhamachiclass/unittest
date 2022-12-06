@@ -51,6 +51,13 @@ Solution for recursive_json_search.py
 # Fill the Python code in this file
 from test_data import *
 def json_search(key, input_object):
+    """
+    Search a key from JSON object, get nothing back if key is not found
+    key: "keyword" to be searched, case sensitive
+    input_object: JSON object to be parsed, test_data.py in this case
+    inner_function() is actually doing the recursive search
+    return a list of key:value pairs
+    """
     ret_val=[]
     def inner_function(key,input_object):
         if isinstance(input_object, dict): # Iterate dictionary
